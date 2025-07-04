@@ -128,11 +128,11 @@ else
     if [ "$gost_version_choice" -eq 2 ]; then
         echo $'\e[32mInstalling the latest Gost version 3.x, please wait...\e[0m'
         
-        # Use the direct download link for Gost 3.0.0
+        # Use the direct download link for Gost 3.1.0
         download_url="https://github.com/go-gost/gost/releases/download/v3.1.0/gost_3.1.0_linux_amd64.tar.gz"
 
         # Download the file to /tmp and check if it was downloaded correctly
-        echo $'\e[32mDownloading Gost 3.0.0...\e[0m'
+        echo $'\e[32mDownloading Gost 3.1.0...\e[0m'
         wget -4 -O /tmp/gost.tar.gz "$download_url"
         
         # Check if the file was downloaded successfully
@@ -150,7 +150,7 @@ else
         # Extract the downloaded file
         tar -xvzf /tmp/gost.tar.gz -C /usr/local/bin/
         chmod +x /usr/local/bin/gost
-        echo $'\e[32mGost 3.0.0 installed successfully.\e[0m'
+        echo $'\e[32mGost 3.1.0 installed successfully.\e[0m'
     else
         echo $'\e[31mInvalid choice. Exiting...\e[0m'
         exit
