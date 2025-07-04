@@ -118,7 +118,7 @@ systemctl enable sysctl-custom
 # Download and install Gost based on user's choice
 if [ "$gost_version_choice" -eq 1 ]; then
     echo $'\e[32mInstalling Gost version 2.11.5, please wait...\e[0m' && \
-    wget https://github.com/ginuerzh/gost/releases/download/v2.11.5/gost-linux-amd64-2.11.5.gz && \
+    wget -4 https://github.com/ginuerzh/gost/releases/download/v2.11.5/gost-linux-amd64-2.11.5.gz && \
     echo $'\e[32mGost downloaded successfully.\e[0m' && \
     gunzip gost-linux-amd64-2.11.5.gz && \
     sudo mv gost-linux-amd64-2.11.5 /usr/local/bin/gost && \
@@ -129,11 +129,11 @@ else
         echo $'\e[32mInstalling the latest Gost version 3.x, please wait...\e[0m'
         
         # Use the direct download link for Gost 3.0.0
-        download_url="https://github.com/go-gost/gost/releases/download/v3.0.0/gost_3.0.0_linux_amd64.tar.gz"
+        download_url="https://github.com/go-gost/gost/releases/download/v3.1.0/gost_3.1.0_linux_amd64.tar.gz"
 
         # Download the file to /tmp and check if it was downloaded correctly
         echo $'\e[32mDownloading Gost 3.0.0...\e[0m'
-        wget -O /tmp/gost.tar.gz "$download_url"
+        wget -4 -O /tmp/gost.tar.gz "$download_url"
         
         # Check if the file was downloaded successfully
         if [ ! -f /tmp/gost.tar.gz ]; then
