@@ -110,7 +110,7 @@ systemctl enable sysctl-custom
     # Prompt user to choose Gost version
     echo $'\e[32mChoose Gost version:\e[0m'
     echo $'\e[36m1. \e[0mGost version 2.11.5 (official)'
-    echo $'\e[36m2. \e[0mGost version 3.0.0 (latest)'
+    echo $'\e[36m2. \e[0mGost version 3.1.0 (latest)'
 
     # Read user input for Gost version
     read -p $'\e[97mYour choice: \e[0m' gost_version_choice
