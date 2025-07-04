@@ -7,5 +7,5 @@
 Clone the repository:
 
 ```bash
-bash <(curl -Ls -4 https://raw.githubusercontent.com/Kup1ng/Gost/main/install.sh)
+bash <(curl -4 -Ls https://raw.githubusercontent.com/Kup1ng/Gost/main/install.sh)
    ```
