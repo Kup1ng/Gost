@@ -507,7 +507,7 @@ fi
 # If option 9 is selected
 if [ "$choice" -eq 9 ]; then
     echo $'\e[32mInstalling BBR, please wait...\e[0m' && \
-    wget -N --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && \
+    wget -N -4 --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && \
     chmod +x bbr.sh && \
     bash bbr.sh
     bash "$0"
